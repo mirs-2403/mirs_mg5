@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     esp_port = DeclareLaunchArgument(
-        'esp_port', default_value='/dev/ttyUSB1',
+        'esp_port', default_value='/dev/ttyUSB0',
         description='Set esp32 usb port.')
     
     # YAMLファイルのパス（エラーが起きるときは絶対パスに変更を推奨）
