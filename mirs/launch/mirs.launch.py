@@ -55,7 +55,14 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         output='screen',
-        arguments=["0", "0", "0.35", "-1.57", "0", "0", "base_link", "laser"]
+        arguments=["0", "0", "0.22", "0", "0", "3.14", "base_link", "laser"]
+    )
+
+    camera_tf2_ros_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        output='screen',
+        arguments=["-0.12", "0", "0.315", "-1.57", "0", "-0.8727", "base_link", "my_camera"]
     )
 
     ld = LaunchDescription()
@@ -67,5 +74,6 @@ def generate_launch_description():
     ld.add_action(micro_ros)
     ld.add_action(sllidar_launch)
     ld.add_action(tf2_ros_node)
+    ld.add_action(camera_tf2_ros_node)
 
     return ld

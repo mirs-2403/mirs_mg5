@@ -14,7 +14,7 @@ def generate_launch_description():
         description='Set esp32 usb port.')
     
     # YAMLファイルのパス（エラーが起きるときは絶対パスに変更を推奨）
-    config_file_path = os.path.join(get_package_share_directory('mirs'),'config','config.yaml')
+    config_file_path = "/home/oumuika/Documents/mirs2403/src/mirs_mg5/mirs/config/config.yaml"
     #config_file_path = your_file_path
 
     odometry_node = Node(
